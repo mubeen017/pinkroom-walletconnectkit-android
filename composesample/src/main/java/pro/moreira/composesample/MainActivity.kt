@@ -74,7 +74,12 @@ class MainActivity : ComponentActivity() {
             modifier = Modifier.fillMaxSize(),
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
-        ) { WalletConnectButton(walletConnectKit = walletConnectKit) }
+        ) {
+            WalletConnectButton(
+                contentModifier = Modifier.size(212.dp, 32.dp).padding(4.dp),
+                walletConnectKit = walletConnectKit
+            )
+        }
     }
 
     @Preview(showBackground = true, showSystemUi = true)
@@ -150,9 +155,7 @@ class MainActivity : ComponentActivity() {
                             DropdownMenuItem(onClick = {
                                 expanded = false
                                 onDisconnected()
-                            }) {
-                                Text(text = "Disconnect")
-                            }
+                            }) { Text(text = "Disconnect") }
                         }
                     }
                 }
