@@ -30,7 +30,8 @@ library for Kotlin is stable, we will support the v2 protocol.
 ## Installation
 
 ``` groovy
-implementation 'dev.pinkroom:walletconnectkit:<latest_version>'
+implementation 'com.github.mubeen017:pinkroom-walletconnectkit-android:1.0'
+
 ```
 
 ## Setup
