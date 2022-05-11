@@ -18,6 +18,8 @@ internal class SessionRepository(
     private var config = buildConfig()
     override var session: Session? = null
 
+    override var storages: WCSessionStore = storage
+
     override val address get() = session?.approvedAccounts()?.firstOrNull()
     internal val wcUri get() = config.toWCUri()
 

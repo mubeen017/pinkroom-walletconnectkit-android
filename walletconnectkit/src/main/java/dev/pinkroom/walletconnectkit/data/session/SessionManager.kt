@@ -1,6 +1,7 @@
 package dev.pinkroom.walletconnectkit.data.session
 
 import org.walletconnect.Session
+import org.walletconnect.impls.WCSessionStore
 
 interface SessionManager {
     var session: Session?
@@ -9,4 +10,5 @@ interface SessionManager {
     fun removeSession()
     fun loadSession(callback: Session.Callback)
     val isSessionStored: Boolean
+    val storages: WCSessionStore
 }
